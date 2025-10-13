@@ -1,0 +1,13 @@
+---
+config:
+  theme: redux
+  layout: dagre
+  look: neo
+  themeVariables:
+    edgeLabelBackground: white
+---
+flowchart LR
+    n1["model"] -- "<span style=font-size:1.1em;>(1)</span>" --> n2["tok"]
+    n1@{ shape: diam}
+    n2@{ shape: doc}
+    style n2 fill:#C8E6C9
