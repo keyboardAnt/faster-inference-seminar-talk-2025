@@ -8,6 +8,41 @@ math: katex
 <!-- header: "" -->
 <!-- paginate: skip -->
 
+## Advances in Speculative Decoding
+
+Nadav Timor (Weizmann Institute of Science)
+
+Based on joint work with: Jonathan Mamou, Daniel Korat, Moshe Berchansky, Gaurav Jain, Michal Gordon-Kiwkowitz, Tomer Galanti, Roy Schwartz, Oren Pereg, Moshe Wasserblat, David Harel
+
+---
+
+# Inference optimizations matter
+
+Trivial: lower latency & cost
+
+Nontrivial:
+* Quality correlates w/ thinking (aka reasoning/rollouts)
+* More thinking within budget
+
+---
+
+Why speculative decoding?
+
+---
+
+<!-- paginate: true -->
+
+We'll cover:
+1. heterogeneous vocabs (ICML '25 oral; default in $🤗$ Transformers)
+2. speculation parallelism (ICLR '25)
+3. dynamic lookahead (NeurIPS workshop '24; default in $🤗$ Transformers)
+
+---
+
+
+
+---
+
 ## Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies
 
 ***Nadav Timor***$~^w$, Jonathan Mamou$^\mathcal{i}$, Daniel Korat$^\mathcal{i}$, Moshe Berchansky$^\mathcal{i}$, Gaurav Jain$^\mathcal{d}$, Oren&nbsp;Pereg$^\mathcal{i}$, Moshe Wasserblat$^\mathcal{i}$, David Harel$^w$
@@ -29,8 +64,6 @@ https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://openreview
 -->
 
 ---
-
-<!-- paginate: true -->
 
 # Speculative decoding &nbsp;&nbsp;<span style="font-size: 0.5em;">[Leviathan et al., 2023; Chen et al., 2023]</span>
 
@@ -367,3 +400,15 @@ Our third algorithm, TLI, works at the token level.
 * For DeepSeek-R1 and Gemma-2 we found tasks where a faster heterogeneous drafter outperforms in-family drafters.
 * We contributed our code to Hugging Face Transformers, and the maintainers independently evaluated our methods.
 -->
+
+---
+
+## Speculation Parallelism and Distributed Speculative Decoding
+
+Placeholder header slide — fill authors, venue, and link
+
+---
+
+## Dynamic Speculation Lookahead Scheduling
+
+Placeholder header slide — fill authors, venue, and link
