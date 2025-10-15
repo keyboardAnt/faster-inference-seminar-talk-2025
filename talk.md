@@ -35,25 +35,28 @@ Based on joint work with: Jonathan Mamou, Daniel Korat, Moshe Berchansky, Gaurav
 # Speculative decoding is lossless
 
 * <span style="color: red;">lossy: quantization, distillation, sparse attention, routing, early exiting...</span>
-* <span style="color: green;">lossless: batching, caching (PagedAttention), kernels (FlashAttention)...</span>
+* <span style="color: green;">lossless: caching (PagedAttention), kernels (FlashAttention)...</span>
 
 <!--Perhaps the most prominent example of a lossless kernel optimization is FlashAttention.-->
 
 ---
 
+# Autoregressive decoding is a bottleneck
+
+![center h:400](figures/autoregressive.png)
+
+<!-- Autoregressive decoding is a main bottleneck in LLM inference. In autoregressive decoding, each forward pass generates a single token. -->
+
+---
+
 # Speculative decoding &nbsp;&nbsp;<span style="font-size: 0.5em;">[Leviathan et al., 2023; Chen et al., 2023]</span>
 
-<br>
+[figure]
 
-* <span style="color: red;">Autoregressive decoding</span>
-    ![center h:140](figures/autoregressive.svg)
-* <span style="color: green;">Speculative decoding</span>
-    ![center h:230](figures/speculative.svg)
-    * <span style="color: green;">up to 3x faster ($\downarrow$ latency, $\uparrow$ throughput)</span>
-    * <span style="color: green;">lossless</span>
+* <span style="color: green;">often 2x–3x faster ($\downarrow$ latency, $\uparrow$ throughput)</span>
+* <span style="color: green;">lossless</span>
 
 <!--
-* Autoregressive decoding is a main bottleneck in LLM inference. In autoregressive decoding, each forward pass generates a single token.
 * Speculative decoding accelerates the inference. It employs a faster "drafter" model that proposes several "draft" tokens ahead, and then the original "target" model validates them in parallel.
 * It's often 2-3x faster *than autoregressive*, as reported in the literature.
 * The primary advantage over other acceleration methods is losslessness. Speculative decoding preserves the target distribution.
