@@ -32,7 +32,12 @@ Based on joint work with: Jonathan Mamou, Daniel Korat, Moshe Berchansky, Gaurav
 
 ---
 
+# Speculative decoding is lossless
 
+* <span style="color: red;">lossy: quantization, distillation, sparse attention, routing, early exiting...</span>
+* <span style="color: green;">lossless: batching, caching (PagedAttention), kernels (FlashAttention)...</span>
+
+<!--Perhaps the most prominent example of a lossless kernel optimization is FlashAttention.-->
 
 ---
 
