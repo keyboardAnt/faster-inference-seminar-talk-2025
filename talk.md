@@ -32,6 +32,10 @@ Based on joint work with: Jonathan Mamou, Daniel Korat, Moshe Berchansky, Gaurav
 
 ---
 
+
+
+---
+
 # Speculative decoding &nbsp;&nbsp;<span style="font-size: 0.5em;">[Leviathan et al., 2023; Chen et al., 2023]</span>
 
 <br>
@@ -68,10 +72,6 @@ Today:
 ***Nadav Timor***$~^w$, Jonathan Mamou$^\mathcal{i}$, Daniel Korat$^\mathcal{i}$, Moshe Berchansky$^\mathcal{i}$, Gaurav Jain$^\mathcal{d}$, Oren&nbsp;Pereg$^\mathcal{i}$, Moshe Wasserblat$^\mathcal{i}$, David Harel$^w$
 
 $^w~$Weizmann Institute of Science, $^\mathcal{i}~$Intel Labs, $^\mathcal{d}~$d-Matrix
-
-<div style="position: absolute; bottom: 45px; right: 120px;">
-    <img src="figures/qr.png" alt="QR code for paper on OpenReview" style="width: 160px;">
-</div>
 
 <!--
 Welcome, everyone!
@@ -209,10 +209,6 @@ To conclude,
 > 2. Unlocks lossless speedups that previously required training
 > 3. Default in $🤗$ (388k repos + 6k libs)
 
-<div style="position: absolute; bottom: 45px; right: 120px;">
-    <img src="figures/qr.png" alt="QR code for paper on OpenReview" style="width: 160px;">
-</div>
-
 ---
 
 # Thank you!
@@ -225,10 +221,6 @@ To conclude,
 > 1. Speculative decoding with any off-the-shelf drafter
 > 2. Unlocks lossless speedups that previously required training
 > 3. Default in $🤗$ (388k repos + 6k libs)
-
-<div style="position: absolute; bottom: 45px; right: 120px;">
-    <img src="figures/qr.png" alt="QR code for paper on OpenReview" style="width: 160px;">
-</div>
 
 <!-- 
 Thank you for your attention!
@@ -274,8 +266,6 @@ Please feel free to email me with any feedback or reach out during the conferenc
 # Heterogeneous vocabulary challenge
 
 * Tokens outside the intersection have **no “natural” 1-to-1 mapping**
-    <!-- ![center](figures/challenge.svg)
-    * Example: -->
     $$
     \begin{aligned}
     \text{‘rainbow’} &\rightarrow \text{‘rain’} \oplus \text{‘bow’} \\
