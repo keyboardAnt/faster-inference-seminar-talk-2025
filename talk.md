@@ -34,22 +34,22 @@ Jonathan Mamou, Daniel Korat, Moshe Berchansky, Oren Pereg, Gaurav Jain, Michal 
 * IMO gold medals.
 -->
 
----
-
-# Speculative decoding is lossless
-
-* <span style="color: red;">lossy: quantization, distillation, sparse attention, routing, early exiting...</span>
-* <span style="color: green;">lossless: caching (PagedAttention), kernels (FlashAttention)...</span>
-
-<!--Perhaps the most prominent example of a lossless kernel optimization is FlashAttention.-->
 
 ---
 
-# Autoregressive decoding is a bottleneck
+# The inference bottleneck: Autoregressive decoding
 
-![center h:400](figures/autoregressive.png)
+<span data-marpit-fragment>![center h:300](figures/autoregressive.png)</span>
+
+* Bottleneck: Won't process the $i$th token until the $(i-1)$th token is generated
+* Faster, but still sequential:
+    * <span style="color: green;">KV caching, FlashAttention-like kernels... (lossless)</span>
+    * <span style="color: red;">quantization, distillation, sparse attention, routing, early exiting... (lossy)</span>
+* Parallel:
+    * <span style="color: green;">speculative decoding (lossless)</span>
 
 <!-- Autoregressive decoding is a main bottleneck in LLM inference. In autoregressive decoding, each forward pass generates a single token. -->
+<!--Perhaps the most prominent example of a lossless kernel optimization is FlashAttention.-->
 
 ---
 
