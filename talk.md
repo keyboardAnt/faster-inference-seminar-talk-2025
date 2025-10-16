@@ -37,11 +37,11 @@ Jonathan Mamou, Daniel Korat, Moshe Berchansky, Oren Pereg, Gaurav Jain, Michal 
 
 ---
 
-# The inference bottleneck: Autoregressive decoding
+# Parallelizing autoregressive decoding
 
-<span data-marpit-fragment>![center h:300](figures/autoregressive.png)</span>
-
-* Bottleneck: Won't process the $i$th token until the $(i-1)$th token is generated
+* Bottleneck: autoregressive decoding is sequential
+    <span data-marpit-fragment>![center h:200](figures/autoregressive.png)</span>
+    * Won't process the $i$th token until the $(i-1)$th is generated
 * Faster, but still sequential:
     * <span style="color: green;">KV caching, FlashAttention-like kernels... (lossless)</span>
     * <span style="color: red;">quantization, distillation, sparse attention, routing, early exiting... (lossy)</span>
@@ -50,6 +50,19 @@ Jonathan Mamou, Daniel Korat, Moshe Berchansky, Oren Pereg, Gaurav Jain, Michal 
 
 <!-- Autoregressive decoding is a main bottleneck in LLM inference. In autoregressive decoding, each forward pass generates a single token. -->
 <!--Perhaps the most prominent example of a lossless kernel optimization is FlashAttention.-->
+
+---
+
+# Batching
+
+<span data-marpit-fragment>Batching (aka vectorization) is a data parallelism technique</span>
+
+<br>
+
+* For $B$ input contexts:
+    $$
+    \begin{pmatrix} c^{(1)} \\ \vdots \\ c^{(B)} \end{pmatrix} \;\longmapsto\; \begin{pmatrix} p(\cdot\mid c^{(1)}) \\ \vdots \\ p(\cdot\mid c^{(B)}) \end{pmatrix}
+    $$
 
 ---
 
