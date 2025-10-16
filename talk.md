@@ -10,9 +10,13 @@ math: katex
 
 ## Advances in Speculative Decoding
 
-Nadav Timor (Weizmann Institute of Science)
+Nadav Timor
+Weizmann Institute of Science
 
-Based on joint work with: Jonathan Mamou, Daniel Korat, Moshe Berchansky, Gaurav Jain, Michal Gordon-Kiwkowitz, Tomer Galanti, Roy Schwartz, Oren Pereg, Moshe Wasserblat, David Harel
+<br>
+
+Based on joint work with
+Jonathan Mamou, Daniel Korat, Moshe Berchansky, Oren Pereg, Gaurav Jain, Michal Gordon-Kiwkowitz, Tomer Galanti, Roy Schwartz, Moshe Wasserblat, David Harel
 
 ---
 
